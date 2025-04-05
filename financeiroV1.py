@@ -1,3 +1,11 @@
+import subprocess
+import sys
+
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib==3.8.0"])
+    import matplotlib.pyplot as plt
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
